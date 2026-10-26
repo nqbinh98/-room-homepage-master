@@ -1,0 +1,37 @@
+// _boilerplate.scss
+@use '../util' as u;
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: u.$font-alata;
+    font-size: 1rem;
+}
+
+li, button {
+    cursor: pointer;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
