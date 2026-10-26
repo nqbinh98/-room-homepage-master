@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution here](https://github.com/nqbinh98/-room-homepage-master)
-- Live Site URL: [Live site here](https://your-live-site-url.com)
+- Live Site URL: [Live site here](https://nqbinh98.github.io/-room-homepage-master/)
 
 ## My process
 
