@@ -48,7 +48,7 @@ prevBtn.addEventListener('click', function () {
     updateHeroContent();
 })
 
-menuBtn.addEventListener('click', function (e) {
+menuBtn.addEventListener('click', function () {
     navWrapper.classList.add('active');
     menuBtn.classList.add('hide');
     closeBtn.classList.add('show');
@@ -56,7 +56,7 @@ menuBtn.addEventListener('click', function (e) {
     navLists.classList.add('active');
 })
 
-closeBtn.addEventListener('click', function (e) {
+closeBtn.addEventListener('click', function () {
     navWrapper.classList.remove('active');
     menuBtn.classList.remove('hide');
     closeBtn.classList.remove('show');

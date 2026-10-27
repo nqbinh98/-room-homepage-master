@@ -4,7 +4,6 @@
     }
 
     &__nav {
-        // display: flex;
         height: 100%;
         width: 100%;
         position: relative;
@@ -24,21 +23,38 @@
             padding: clamp(1rem, 1rem + 2vw, 3rem + 10vw);
         }
 
-        &-close:hover {
-            opacity: .8;
-        }
-
         &-close {
             display: none;
             padding: 1rem;
             cursor: pointer;
+            button {
+                padding: unset;
+                background: none;
+                border: none;
+            }
             img {
                 display: flex;
             }
         }
 
+        &-close.show {
+            display: block;
+        }
+
+        &-close:hover {
+            opacity: .8;
+        }
+
         &-menu {
             padding: 1rem;
+            button {
+                padding: unset;
+                background: none;
+                border: none;
+            }
+        }
+        &-menu.hide {
+            display: none;
         }
 
         &-logo {
@@ -47,37 +63,40 @@
             left: 50%;
             transform: translateX(-50%);
         }
-
-        &-lists.active {
-            display: flex;
-            flex-direction: row;
-            li {
-                a {
-                    color: var(--black-color);
-                }
-            }
+        &-logo.hide {
+            display: none;
         }
 
-        &-lists {
-            list-style: none;
-            display: none;
-            margin: 0;
-            padding: 0;
+    }
 
-
-            li {
-                position: relative;
-                padding: 1rem;
-                a {
-                    text-transform: lowercase;
-                    text-decoration: none;
-                    color: var(--white-color);
-                    font-weight: 600;
-                }
+    &__nav-lists.active {
+        display: flex;
+        flex-direction: row;
+        li {
+            a {
+                color: var(--black-color);
             }
         }
     }
 
+    &__nav-lists {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+
+
+        li {
+            position: relative;
+            padding: 1rem;
+            a {
+                text-transform: lowercase;
+                text-decoration: none;
+                color: var(--white-color);
+                font-weight: 600;
+            }
+        }
+    }
 
     &__hero {
         width: 100%;
@@ -122,6 +141,10 @@
         flex-direction: column;
         justify-content: center;
 
+        h1 {
+            font-size: clamp(2rem, 2rem + 1vw, 3rem);
+        }
+        
         p {
             color: var(--grey-500);
             line-height: 1.2;
@@ -171,6 +194,7 @@
     .discover__nav-menu {
         display: none;
     }
+    
     
     .discover__nav-item::after{
         display: none;

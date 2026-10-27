@@ -18,47 +18,53 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <div class="discover">
       <div class="discover__section">
         <div class="discover__nav">
           <div class="discover__hero">
             <picture>
               <source media="(min-width: 56.25rem)" srcset="./images/desktop-image-hero-1.jpg" sizes="">
-              <img src="./images/mobile-image-hero-1.jpg" alt="">
+              <img src="./images/mobile-image-hero-1.jpg" alt="Hero image">
             </picture>
           </div>
-          <div class="discover__nav-wrapper">
+          <header class="discover__nav-wrapper">
             <div class="discover__nav-menu">
-              <img src="./images/icon-hamburger.svg" alt="">
+              <button type="button" aria-label="Open menu">
+                <img src="./images/icon-hamburger.svg" alt="">
+              </button>
             </div>
             <div class="discover__nav-close">
-              <img src="./images/icon-close.svg" alt="">
+              <button type="button" aria-label="Close menu">
+                <img src="./images/icon-close.svg" alt="">
+              </button>
             </div>
             <div class="discover__nav-logo">
-              <img src="./images/logo.svg" alt="">
+              <img src="./images/logo.svg" alt="Room logo">
             </div>
-            <ul class="discover__nav-lists">
-              <li class="discover__nav-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="discover__nav-item">
-                <a href="#">Shop</a>
-              </li>
-              <li class="discover__nav-item">
-                <a href="#">About</a>
-              </li>
-              <li class="discover__nav-item">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
+            <nav class="discover__nav-lists-wrapper" aria-label="Main navigation">
+              <ul class="discover__nav-lists">
+                <li class="discover__nav-item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="discover__nav-item">
+                  <a href="#">Shop</a>
+                </li>
+                <li class="discover__nav-item">
+                  <a href="#">About</a>
+                </li>
+                <li class="discover__nav-item">
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </header>
         </div>
         <div class="discover__control">
-          <button class="prev-btn">
+          <button type="button" aria-label="Prev slide" class="prev-btn">
             <img src="./images/icon-angle-left.svg" alt="">
           </button>
-          <button class="next-btn">
+          <button type="button" aria-label="Next slide" class="next-btn">
             <img src="./images/icon-angle-right.svg" alt="">
           </button>
         </div>
@@ -70,7 +76,7 @@
           Our experts combine form and function in bringing your vision to life. Create a room in your 
           own style with our collection and make your property a reflection of you and what you love.
         </p>
-        <button>Shop now
+        <button type="button" aria-label="Redirect to Shop page">Shop now
           <img src="./images/icon-arrow.svg" alt="">
         </button>
       </div>
@@ -81,7 +87,7 @@
           Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
           store locator. Any questions? Don't hesitate to contact us today.
         </p>
-        <button>Shop now
+        <button type="button" aria-label="Redirect to Shop page">Shop now
           <img src="./images/icon-arrow.svg" alt="">
         </button>
       </div>
@@ -92,7 +98,7 @@
           to ensure that every product is made as perfect and as consistent as possible. With three decades of 
           experience in this industry, we understand what customers want for their home and office.
         </p>
-        <button>Shop now
+        <button type="button" aria-label="Redirect to Shop page">Shop now
           <img src="./images/icon-arrow.svg" alt="">
         </button>
       </div>
@@ -114,7 +120,7 @@
         <img src="images/image-about-light.jpg" alt="">
       </div>
     </div>
-  </div>  
+  </main>  
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 

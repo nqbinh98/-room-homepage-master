@@ -31,14 +31,6 @@ li:hover {
   cursor: pointer;
 }
 
-.hide {
-  display: none !important;
-}
-
-.show {
-  display: block !important;
-}
-
 .discover__section {
   position: relative;
 }
@@ -60,25 +52,44 @@ li:hover {
   align-items: center;
   padding: clamp(1rem, 1rem + 2vw, 3rem + 10vw);
 }
-.discover__nav-close:hover {
-  opacity: 0.8;
-}
 .discover__nav-close {
   display: none;
   padding: 1rem;
   cursor: pointer;
 }
+.discover__nav-close button {
+  padding: unset;
+  background: none;
+  border: none;
+}
 .discover__nav-close img {
   display: flex;
 }
+.discover__nav-close.show {
+  display: block;
+}
+.discover__nav-close:hover {
+  opacity: 0.8;
+}
 .discover__nav-menu {
   padding: 1rem;
+}
+.discover__nav-menu button {
+  padding: unset;
+  background: none;
+  border: none;
+}
+.discover__nav-menu.hide {
+  display: none;
 }
 .discover__nav-logo {
   padding: 1rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+.discover__nav-logo.hide {
+  display: none;
 }
 .discover__nav-lists.active {
   display: flex;
@@ -144,6 +155,9 @@ li:hover {
   display: none;
   flex-direction: column;
   justify-content: center;
+}
+.discover__content h1 {
+  font-size: clamp(2rem, 2rem + 1vw, 3rem);
 }
 .discover__content p {
   color: var(--grey-500);
