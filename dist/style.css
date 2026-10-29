@@ -125,6 +125,7 @@ li:hover {
 }
 .discover__hero img {
   width: 100%;
+  height: auto;
   -o-object-position: center;
      object-position: center;
   -o-object-fit: cover;

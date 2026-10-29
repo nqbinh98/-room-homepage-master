@@ -10,43 +10,21 @@ const prevBtn = document.querySelector('.discover__control .prev-btn');
 const heroItems = document.querySelectorAll('.discover__content'); 
 let indexImg = 1;
 
-function updateHeroContent () {
-    heroItems.forEach(item => {
-        item.classList.remove('active');
-    })
+const SLIDE_COUNT = 3;
 
-    heroItems.forEach(item => {
-        if (Number(item.getAttribute('data-hero')) === indexImg) {
-            item.classList.add('active');
-        } 
-    })
+function goTo(slide) {
+  indexImg = ((slide - 1 + SLIDE_COUNT) % SLIDE_COUNT) + 1;
+  heroSrc.srcset = `./images/desktop-image-hero-${indexImg}.jpg`;
+  heroImg.src = `./images/mobile-image-hero-${indexImg}.jpg`;
+  heroItems.forEach(item => item.classList.toggle('active', Number(item.dataset.hero) === indexImg));
 }
 
-nextBtn.addEventListener('click', function () {
-    if (indexImg < 3) {
-        indexImg++;
-        heroSrc.srcset = `./images/desktop-image-hero-${indexImg}.jpg`
-        heroImg.src = `./images/mobile-image-hero-${indexImg}.jpg`
-    } else {
-        indexImg = 1;
-        heroSrc.srcset = `./images/desktop-image-hero-${indexImg}.jpg`
-        heroImg.src = `./images/mobile-image-hero-${indexImg}.jpg`
-    }
-    updateHeroContent();
-})
-
-prevBtn.addEventListener('click', function () {
-    if (indexImg > 1) {
-        indexImg--;
-        heroSrc.srcset = `./images/desktop-image-hero-${indexImg}.jpg`
-        heroImg.src = `./images/mobile-image-hero-${indexImg}.jpg`
-    } else {
-        indexImg = 3;
-        heroSrc.srcset = `./images/desktop-image-hero-${indexImg}.jpg`
-        heroImg.src = `./images/mobile-image-hero-${indexImg}.jpg`
-    }
-    updateHeroContent();
-})
+nextBtn.addEventListener('click', () => goTo(indexImg + 1));
+prevBtn.addEventListener('click', () => goTo(indexImg - 1));
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') goTo(indexImg + 1);
+  if (e.key === 'ArrowLeft') goTo(indexImg - 1);
+});
 
 menuBtn.addEventListener('click', function () {
     navWrapper.classList.add('active');
@@ -54,6 +32,7 @@ menuBtn.addEventListener('click', function () {
     closeBtn.classList.add('show');
     logo.classList.add('hide');
     navLists.classList.add('active');
+    closeBtn.focus();
 })
 
 closeBtn.addEventListener('click', function () {

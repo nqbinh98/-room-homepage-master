@@ -24,8 +24,8 @@
         <div class="discover__nav">
           <div class="discover__hero">
             <picture>
-              <source media="(min-width: 56.25rem)" srcset="./images/desktop-image-hero-1.jpg" sizes="">
-              <img src="./images/mobile-image-hero-1.jpg" alt="Hero image">
+              <source media="(min-width: 56.25rem)" srcset="./images/desktop-image-hero-1.jpg" width="840" height="534">
+              <img src="./images/mobile-image-hero-1.jpg" alt="Hero image" width="375" height="360">
             </picture>
           </div>
           <header class="discover__nav-wrapper">
@@ -61,7 +61,7 @@
           </header>
         </div>
         <div class="discover__control">
-          <button type="button" aria-label="Prev slide" class="prev-btn">
+          <button type="button" aria-label="Previous slide" class="prev-btn">
             <img src="./images/icon-angle-left.svg" alt="">
           </button>
           <button type="button" aria-label="Next slide" class="next-btn">
@@ -69,38 +69,40 @@
           </button>
         </div>
       </div>
-      <div data-hero="1" class="discover__content active">
-        <h1>Discover innovative ways to decorate</h1>
-        <p>
-          We provide unmatched quality, comfort, and style for property owners across the country. 
-          Our experts combine form and function in bringing your vision to life. Create a room in your 
-          own style with our collection and make your property a reflection of you and what you love.
-        </p>
-        <button type="button" aria-label="Redirect to Shop page">Shop now
-          <img src="./images/icon-arrow.svg" alt="">
-        </button>
-      </div>
-      <div data-hero="2" class="discover__content">
-        <h1>We are available all across the globe</h1>
-        <p>
-          With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-          Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-          store locator. Any questions? Don't hesitate to contact us today.
-        </p>
-        <button type="button" aria-label="Redirect to Shop page">Shop now
-          <img src="./images/icon-arrow.svg" alt="">
-        </button>
-      </div>
-      <div data-hero="3" class="discover__content">
-        <h1>Manufactured with the best materials</h1>
-        <p>
-          Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-          to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-          experience in this industry, we understand what customers want for their home and office.
-        </p>
-        <button type="button" aria-label="Redirect to Shop page">Shop now
-          <img src="./images/icon-arrow.svg" alt="">
-        </button>
+      <div class="discover__content-wrapper" aria-live="polite">
+        <div data-hero="1" class="discover__content active">
+          <h1>Discover innovative ways to decorate</h1>
+          <p>
+            We provide unmatched quality, comfort, and style for property owners across the country. 
+            Our experts combine form and function in bringing your vision to life. Create a room in your 
+            own style with our collection and make your property a reflection of you and what you love.
+          </p>
+          <button type="button" aria-label="Redirect to Shop page">Shop now
+            <img src="./images/icon-arrow.svg" alt="">
+          </button>
+        </div>
+        <div data-hero="2" class="discover__content">
+          <h1>We are available all across the globe</h1>
+          <p>
+            With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+            Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+            store locator. Any questions? Don't hesitate to contact us today.
+          </p>
+          <button type="button" aria-label="Redirect to Shop page">Shop now
+            <img src="./images/icon-arrow.svg" alt="">
+          </button>
+        </div>
+        <div data-hero="3" class="discover__content">
+          <h1>Manufactured with the best materials</h1>
+          <p>
+            Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+            to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+            experience in this industry, we understand what customers want for their home and office.
+          </p>
+          <button type="button" aria-label="Redirect to Shop page">Shop now
+            <img src="./images/icon-arrow.svg" alt="">
+          </button>
+        </div>
       </div>
     </div>
     <div class="about">

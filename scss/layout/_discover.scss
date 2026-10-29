@@ -108,6 +108,7 @@
         }
         img {
             width: 100%;
+            height: auto;
             object-position: center;
             object-fit: cover;
         }
@@ -132,19 +133,22 @@
             }
         }
     }
+
     &__content.active {
         display: flex;
     }
+
     &__content {
         padding: clamp(2rem, 2rem + 2vw, 3rem + 10vw);
         display: none;
         flex-direction: column;
         justify-content: center;
+        
 
         h1 {
             font-size: clamp(2rem, 2rem + 1vw, 3rem);
         }
-        
+
         p {
             color: var(--grey-500);
             line-height: 1.2;
